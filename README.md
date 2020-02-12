@@ -7,7 +7,7 @@ Metric Learning Approaches for Face Identification
 
 ### Clone this repository
 
-### install
+### Install
 
 ### Run
 
