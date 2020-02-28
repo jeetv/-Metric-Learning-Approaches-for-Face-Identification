@@ -1,17 +1,29 @@
-# face_identification
-Metric Learning Approaches for Face Identification
+# Face Identification
 
+Metric Learning Approaches for Face Identification
 # File structure and modules
 
-## Getting stared
+## Getting started
 
-### Clone this repository
+#### Clone this repository
+```sh
+$ git clone https://github.com/debtanu177/face_identification.git
+```
+#### Install
+```sh
+$ 
+```
 
-### Install
+#### Run
+First step(Optional):
+```sh
+$ python3 dataselect.py
+```
 
-### Run
-
+Second step:
+```sh
+$ python3 mknn.py
+```
 # References
-Is that you? Metric Learning Approaches for Face Identification<br>
-Matthieu Guillaumin, Jakob Verbeek and Cordelia Schmid
-http://lear.inrialpes.fr/pubs/2009/GVS09/verbeek09iccv2.pdf
+Is that you? Metric Learning Approaches for Face Identification
+Matthieu Guillaumin, Jakob Verbeek and Cordelia Schmid http://lear.inrialpes.fr/pubs/2009/GVS09/verbeek09iccv2.pdf
