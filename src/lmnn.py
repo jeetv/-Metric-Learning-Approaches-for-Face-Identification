@@ -55,6 +55,7 @@ class LMNN:
         result = np.dot(self.X.T, laplacian_dot_X)
         return result
 
+
     def init_transform(self):
         L = np.eye(self.X.shape[1])
         self.n_features_out = L.shape[0] if self.n_features_out is None else self.n_features_out
@@ -62,7 +63,6 @@ class LMNN:
         if self.n_features_out > self.n_features_in:
             self.n_features_out = self.n_features_in
         return L, self.n_features_out
-
 
     def fit(self, X, Y):
         #initializing data
@@ -77,7 +77,6 @@ class LMNN:
 
         L, self.n_features_out = self.init_transform()
         # print(L.shape, self.X.shape, self.n_features_out)
-
         
         
         
