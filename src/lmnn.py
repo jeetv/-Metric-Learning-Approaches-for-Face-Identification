@@ -56,6 +56,14 @@ class LMNN:
         return result
 
 
+    def init_transform(self):
+        L = np.eye(self.X.shape[1])
+        self.n_features_out = L.shape[0] if self.n_features_out is None else self.n_features_out
+        self.n_features_in = self.X.shape[1]
+        if self.n_features_out > self.n_features_in:
+            self.n_features_out = self.n_features_in
+        return L, self.n_features_out
+
     def fit(self, X, Y):
         #initializing data
         self.X = X
@@ -66,6 +74,9 @@ class LMNN:
         # storing target neighbours of each samples(will be same through out training)
         self.target_neighbours = self.select_target_neighbour()
         self.grad_static = self.compute_grad_static()
+
+        L, self.n_features_out = self.init_transform()
+        # print(L.shape, self.X.shape, self.n_features_out)
         
         
         
