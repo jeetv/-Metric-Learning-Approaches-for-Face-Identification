@@ -22,7 +22,7 @@ $ python3 dataselect.py
 
 Second step:
 ```sh
-$ python3 mknn.py
+$ python3 main.py
 ```
 # References
 Is that you? Metric Learning Approaches for Face Identification
