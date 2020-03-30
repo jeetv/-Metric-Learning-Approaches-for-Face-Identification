@@ -74,7 +74,7 @@ class MKNN:
        
         return predicted_label, predicted_probab
         
-        
+'''        
 if __name__ == '__main__':
     X = np.random.rand(10, 5)
     X_test = np.random.rand(5, 5)
@@ -88,3 +88,4 @@ if __name__ == '__main__':
     print(predicted_label, predicted_probab)
     acc2 = np.sum(predicted_label == Y_test)/X_test.shape[0]    
     print('Accuracy after MKNN: ', acc2*100)
+'''
