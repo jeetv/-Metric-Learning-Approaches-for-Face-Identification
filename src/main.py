@@ -8,6 +8,7 @@ import matplotlib.pyplot as plt
 from sklearn.decomposition import PCA
 from sklearn.model_selection import train_test_split
 from lmnn import LMNN
+from mknn import MKNN
 from sklearn.neighbors import KNeighborsClassifier
 
 
@@ -133,12 +134,12 @@ if __name__ == '__main__':
     X_transformed = lmnn.transform(X_new)
     X_test_transformed = lmnn.transform(X_new_test)
 
-    print('Performing KNN')
-    neigh = KNeighborsClassifier(n_neighbors=3)
-    neigh.fit(X_transformed, Y_new)
-    pred2 = neigh.predict(X_test_transformed)
-    acc2 = np.sum(pred2 == Y_new_test)/X_test_transformed.shape[0]
-    print('Accuracy after LMNN: ', acc2*100)
+    print('Performing MKNN')
+    mknn = MKNN()
+    predicted_label, predicted_probab = mknn.fit(X_transformed, Y_new).marginalised_knn(X_test_transformed, k=5)
+    #pred2 = neigh.predict(X_test_transformed)
+    acc2 = np.sum(predicted_label == Y_test)/X_test_transformed.shape[0]    
+    print('Accuracy after MKNN: ', acc2*100)
     # TSNE plot after LMNN transformstion.
     # plot_tsne(X_new, Y_new, 'TSNE_after')
     # print('TSNE plot saved')
