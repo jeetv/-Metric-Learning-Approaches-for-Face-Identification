@@ -24,8 +24,8 @@ Second step:
 ```sh
 $ python3 main.py
 ```
-### Examples of positive pairs correctly classified using theMkNN classifier with LMNN as a base metric
-![](images/image.png)
+### Examples of positive pairs correctly classified using the MkNN classifier with LMNN as a base metric
+![](images/image.PNG)
 
 # References
 Is that you? Metric Learning Approaches for Face Identification
