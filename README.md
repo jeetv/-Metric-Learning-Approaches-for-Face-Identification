@@ -10,8 +10,11 @@ Metric Learning Approaches for Face Identification
 $ git clone https://github.com/debtanu177/face_identification.git
 ```
 #### Install
-```sh
-$ 
+```
+opencv
+sklearn
+numpy
+tqdm
 ```
 
 #### Run
